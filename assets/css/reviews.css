@@ -265,6 +265,13 @@ main.wrap { padding-bottom: 64px; }
 }
 
 /* ---------- Muro de reseñas ---------- */
+.reviews__heading {
+  margin: 28px 0 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--ink);
+}
 .reviews {
   margin-top: 24px;
   display: grid;
@@ -357,7 +364,7 @@ main.wrap { padding-bottom: 64px; }
 }
 .info__text {
   margin: 0;
-  max-width: 70ch;
+  max-width: none;
   font-size: 15.5px;
   line-height: 1.65;
   color: var(--ink-soft);
