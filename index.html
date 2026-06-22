@@ -40,18 +40,14 @@
 
   <!--
     ============================================================
-    CÓMO SE PUEBLAN LAS RESEÑAS
+    PÁGINA LIMPIA, A LA ESPERA DE RESEÑAS REALES
     ------------------------------------------------------------
-    Las reseñas se publican desde el portal de Clynia (datos reales).
-    Para añadirlas:
-      1. Insertar cada reseña real como <article class="review">
-         dentro de <section class="reviews"> (ver historial git para
-         la plantilla de tarjeta).
-      2. Añadir al JSON-LD de Organization el bloque "aggregateRating"
-         y el array "review[]" SOLO con la media y el recuento reales.
-         Nunca con datos inventados (Directiva 2005/29/CE + Ómnibus
-         2019/2161 prohíben reseñas y medias falsas).
-      3. Actualizar la respuesta de la FAQ sobre la valoración media.
+    No hay reseñas ni sistema de estrellas. Las opiniones se
+    recogen desde el portal de Clynia. Al publicarlas se decide el
+    formato de presentación y, si se muestra una media, se añade al
+    JSON-LD de Organization "aggregateRating"/"review[]" SOLO con
+    datos reales. Nunca inventados (Directiva 2005/29/CE + Ómnibus
+    2019/2161 prohíben reseñas y medias falsas).
     ============================================================
   -->
 
@@ -150,9 +146,8 @@
     <section class="reviews-empty" id="resenas" aria-labelledby="empty-titulo">
       <h2 id="empty-titulo">Todavía no hay reseñas publicadas</h2>
       <p>
-        Estamos recogiendo las primeras valoraciones reales de pacientes y médicos desde el portal de
-        Clynia. En cuanto haya reseñas verificadas, aparecerán aquí con su puntuación, su fecha y el
-        perfil de quien las escribe.
+        Estamos recogiendo las primeras opiniones reales de pacientes y médicos desde el portal de
+        Clynia. En cuanto haya reseñas verificadas, aparecerán aquí tal y como las dejen.
       </p>
       <a class="btn btn--primary" href="https://clynia.es">Conocer Clynia</a>
     </section>
@@ -225,7 +220,5 @@
       </p>
     </div>
   </footer>
-
-  <script src="assets/js/reviews.js" defer></script>
 </body>
 </html>
