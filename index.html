@@ -6,19 +6,19 @@
 
   <!-- ===================== SEO ===================== -->
   <title>Opiniones de Clynia · Reseñas reales de pacientes y médicos</title>
-  <meta name="description" content="Opiniones y valoraciones reales de Clynia, la plataforma de salud online con médicos colegiados en España. Nota media 4,5 sobre 5. Lee lo que dicen pacientes y médicos sobre el seguimiento, el trato y la experiencia." />
-  <!-- DEMO: noindex mientras las resenas sean de ejemplo. Al publicar reales, volver a: index, follow, max-image-preview:large -->
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Opiniones y reseñas reales de Clynia, la plataforma de salud online con médicos colegiados en España. Recogemos las valoraciones de pacientes y médicos directamente desde su portal." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://clyniareviews.com/" />
   <meta name="theme-color" content="#f6f8f6" />
   <meta name="author" content="Clynia" />
+  <link rel="alternate" hreflang="es-ES" href="https://clyniareviews.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:site_name" content="Clynia Reviews" />
   <meta property="og:title" content="Opiniones de Clynia · Reseñas reales de pacientes y médicos" />
-  <meta property="og:description" content="Nota media 4,5 sobre 5. Opiniones reales sobre Clynia, la plataforma de salud online con médicos colegiados en España." />
+  <meta property="og:description" content="Reseñas y opiniones reales de Clynia, plataforma de salud online con médicos colegiados en España." />
   <meta property="og:url" content="https://clyniareviews.com/" />
   <meta property="og:image" content="https://clyniareviews.com/assets/logos/clynia-wordmark.png" />
 
@@ -26,7 +26,7 @@
   <!-- TODO: crear assets/img/og-cover.jpg (1200x630) y apuntar og:image + twitter:image ahi; entonces volver a summary_large_image -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Opiniones de Clynia · Reseñas reales de pacientes y médicos" />
-  <meta name="twitter:description" content="Nota media 4,5 sobre 5. Opiniones reales sobre Clynia, plataforma de salud online con médicos colegiados." />
+  <meta name="twitter:description" content="Reseñas y opiniones reales de Clynia, plataforma de salud online con médicos colegiados en España." />
   <meta name="twitter:image" content="https://clyniareviews.com/assets/logos/clynia-wordmark.png" />
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
@@ -40,20 +40,22 @@
 
   <!--
     ============================================================
-    AVISO PARA QUIEN MANTENGA ESTA PÁGINA
+    CÓMO SE PUEBLAN LAS RESEÑAS
     ------------------------------------------------------------
-    Las reseñas de abajo y los números del JSON-LD son DE EJEMPLO
-    (demo). Antes de publicar en real:
-      1. Sustituir cada <article class="review"> por reseñas
-         reales recogidas en el portal de Clynia.
-      2. Recalcular ratingValue y reviewCount con los datos
-         reales. Nunca publicar una media inventada (es ilegal
-         en la UE: Directiva 2005/29/CE + Ómnibus 2019/2161).
-      3. Quitar el bloque <aside class="demo-note">.
+    Las reseñas se publican desde el portal de Clynia (datos reales).
+    Para añadirlas:
+      1. Insertar cada reseña real como <article class="review">
+         dentro de <section class="reviews"> (ver historial git para
+         la plantilla de tarjeta).
+      2. Añadir al JSON-LD de Organization el bloque "aggregateRating"
+         y el array "review[]" SOLO con la media y el recuento reales.
+         Nunca con datos inventados (Directiva 2005/29/CE + Ómnibus
+         2019/2161 prohíben reseñas y medias falsas).
+      3. Actualizar la respuesta de la FAQ sobre la valoración media.
     ============================================================
   -->
 
-  <!-- ===================== JSON-LD (datos de EJEMPLO) ===================== -->
+  <!-- ===================== JSON-LD ===================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,37 +67,7 @@
     "areaServed": "ES",
     "sameAs": ["https://clynia.es"],
     "contactPoint": { "@type": "ContactPoint", "contactType": "atención al cliente", "availableLanguage": "Spanish", "areaServed": "ES" },
-    "address": { "@type": "PostalAddress", "addressCountry": "ES" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "20",
-      "reviewCount": "20"
-    },
-    "review": [
-      { "@type": "Review", "author": {"@type":"Person","name":"Marta G."}, "datePublished": "2026-05-12", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Por fin un proceso sin vergüenza", "reviewBody": "Llevaba años evitando ir al médico por el tema del peso. Rellené el cuestionario una noche que no dormía y al día siguiente ya tenía respuesta. Me trataron sin sermones." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Javier R."}, "datePublished": "2026-04-03", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Se trabaja con criterio clínico", "reviewBody": "Soy médico colegiado y lo que más valoro es que no presionan para aprobar casos. Si algo no encaja, se rechaza. Da tranquilidad poner tu número de colegiado en algo serio." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Lucía P."}, "datePublished": "2026-05-02", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Me sentí escuchada", "reviewBody": "Tenía dudas sobre la menopausia y no sabía a quién preguntar sin dos meses de lista. Aquí me contestó una médica de verdad, con su nombre y su colegiado." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Andrés M."}, "datePublished": "2026-03-18", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Sencillo de principio a fin", "reviewBody": "Esperaba un lío de formularios y fue al revés. Todo claro, sin letra pequeña rara. El seguimiento por el portal está muy bien montado." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Carmen V."}, "datePublished": "2026-04-21", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "El seguimiento marca la diferencia", "reviewBody": "No es soltarte el tratamiento y adiós. Cada par de semanas te preguntan cómo vas. Eso para mí es lo que lo hace distinto de otras webs." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Raúl T."}, "datePublished": "2026-05-09", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Discreto y rápido", "reviewBody": "Lo que buscaba era no tener que contarlo en la farmacia del barrio. Discreción total y en pocos días resuelto." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Nuria S."}, "datePublished": "2026-02-14", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Información honesta", "reviewBody": "Me gustó que no me prometieran milagros. Te explican qué se puede y qué no, y eso da más confianza que cualquier promesa." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Pablo H."}, "datePublished": "2026-05-19", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Atención humana", "reviewBody": "Pensaba que iba a hablar con un robot y resulta que detrás había gente. Una persona me ajustó el plan cuando le dije que tenía molestias." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Elena D."}, "datePublished": "2026-03-07", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Me ahorró meses de espera", "reviewBody": "En la pública me daban cita para dentro de medio año. Aquí tuve una valoración seria en un par de días." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Sofía L."}, "datePublished": "2026-04-11", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Plataforma seria", "reviewBody": "Como médica agradezco que las historias lleguen ordenadas y completas. Se nota que está pensado por gente que entiende la consulta." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Iván C."}, "datePublished": "2026-01-23", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Sin salir de casa de verdad", "reviewBody": "Vivo en un pueblo y el especialista más cercano lo tengo a una hora. Poder hacer esto desde el móvil me ha facilitado mucho la vida." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Teresa B."}, "datePublished": "2026-04-28", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Trato cercano", "reviewBody": "Lo que más me sorprendió fue el tono. Ni frío ni de venta agresiva. Te hablan como a una persona normal." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Gonzalo F."}, "datePublished": "2026-05-15", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Cumple lo que dice", "reviewBody": "Sin rodeos: pedí, me valoraron, me llegó. Justo lo que prometen en la web, ni más ni menos." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Patricia N."}, "datePublished": "2026-03-30", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Me lo recomendó una amiga", "reviewBody": "Vine por una amiga que estaba contenta y entiendo por qué. El portal es claro y no te sientes un número." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Miguel Á."}, "datePublished": "2026-02-26", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}, "name": "Por fin algo que sigo", "reviewBody": "He empezado mil cosas y las he dejado. Esto lo sigo porque me lo ponen fácil y me preguntan cómo voy." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Sandra R."}, "datePublished": "2026-04-08", "reviewRating": {"@type":"Rating","ratingValue":"4","bestRating":"5","worstRating":"1"}, "name": "Muy bien, con un pero", "reviewBody": "El servicio genial y la médica un encanto. Le quito una estrella porque el primer correo me fue a spam y pensé que no me habían contestado." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Héctor J."}, "datePublished": "2026-03-12", "reviewRating": {"@type":"Rating","ratingValue":"4","bestRating":"5","worstRating":"1"}, "name": "Buena experiencia", "reviewBody": "Todo correcto y serio. Me habría gustado un poco más de detalle en las explicaciones del plan, pero nada grave. Repetiré." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Cristina M."}, "datePublished": "2026-05-05", "reviewRating": {"@type":"Rating","ratingValue":"3","bestRating":"5","worstRating":"1"}, "name": "Bien, pero echo de menos la voz", "reviewBody": "El servicio funciona y la gente es amable, pero todo fue por chat y yo soy más de hablar por teléfono. Es cosa mía, lo digo por si a alguien le pasa igual." },
-      { "@type": "Review", "author": {"@type":"Person","name":"José Luis A."}, "datePublished": "2026-04-17", "reviewRating": {"@type":"Rating","ratingValue":"2","bestRating":"5","worstRating":"1"}, "name": "Esperaba otra cosa", "reviewBody": "Pensé que el tratamiento entraba por mi seguro y resulta que es privado, lo pagas tú. El servicio en sí está bien, pero a mí no me cuadraba el gasto." },
-      { "@type": "Review", "author": {"@type":"Person","name":"Fran D."}, "datePublished": "2026-05-21", "reviewRating": {"@type":"Rating","ratingValue":"1","bestRating":"5","worstRating":"1"}, "name": "El mensajero me la lió", "reviewBody": "Con Clynia ningún problema, gente atenta. Pero la empresa de mensajería tardó cinco días y dejó el paquete en una oficina lejísimos. Por la entrega no repito de momento." }
-    ]
+    "address": { "@type": "PostalAddress", "addressCountry": "ES" }
   }
   </script>
 
@@ -106,13 +78,13 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "¿Qué valoración media tiene Clynia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Clynia tiene una nota media de 4,5 sobre 5 según las opiniones recogidas de pacientes y médicos. La mayoría de las reseñas son de 5 estrellas y destacan el seguimiento, el trato cercano y la rapidez de la valoración médica." }
+        "name": "¿Qué valoración tiene Clynia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Todavía no publicamos una valoración media porque estamos empezando a recoger reseñas verificadas. La media se calculará solo a partir de opiniones reales de pacientes y médicos, nunca con datos inventados." }
       },
       {
         "@type": "Question",
-        "name": "¿Son reales las opiniones de Clynia que aparecen aquí?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las reseñas se recogen de personas que han usado Clynia, a través de su portal de paciente y de médico tras una experiencia real. No se publican opiniones inventadas ni compradas." }
+        "name": "¿Son reales las opiniones que se publican aquí?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Solo publicamos reseñas de personas que han usado Clynia, recogidas a través de su portal de paciente y de médico tras una experiencia real. No publicamos opiniones inventadas ni compradas." }
       },
       {
         "@type": "Question",
@@ -139,17 +111,16 @@
     "@type": "WebPage",
     "name": "Opiniones de Clynia · Reseñas reales de pacientes y médicos",
     "url": "https://clyniareviews.com/",
-    "description": "Opiniones y valoraciones reales de Clynia, plataforma de salud online con médicos colegiados en España. Nota media 4,5 sobre 5.",
+    "description": "Opiniones y reseñas reales de Clynia, plataforma de salud online con médicos colegiados en España. Recogemos valoraciones verificadas de pacientes y médicos desde su portal.",
     "inLanguage": "es-ES",
     "isPartOf": { "@type": "WebSite", "name": "Clynia Reviews", "url": "https://clyniareviews.com/" },
-    "about": { "@type": "Organization", "name": "Clynia", "url": "https://clynia.es" },
-    "dateModified": "2026-06-22"
+    "about": { "@type": "Organization", "name": "Clynia", "url": "https://clynia.es" }
   }
   </script>
 </head>
 
 <body>
-  <a class="skip-link" href="#resenas">Saltar a las reseñas</a>
+  <a class="skip-link" href="#resenas">Saltar al contenido</a>
 
   <!-- ===================== HEADER ===================== -->
   <header class="site-head">
@@ -163,331 +134,34 @@
 
   <main class="wrap">
 
-    <!-- ===================== AVISO DEMO (quitar al publicar real) ===================== -->
-    <aside class="demo-note" role="note">
-      <strong>Página de ejemplo.</strong> Las reseñas que ves son de demostración para enseñar el diseño.
-      Se sustituirán por opiniones reales recogidas en el portal de Clynia antes de publicar.
-    </aside>
-
-    <!-- ===================== HERO / CONFIANZA ===================== -->
+    <!-- ===================== HERO ===================== -->
     <section class="hero" aria-labelledby="titulo">
-      <p class="eyebrow">Opiniones verificadas</p>
+      <p class="eyebrow">Opiniones de Clynia</p>
       <h1 id="titulo" class="hero__title">Lo que de verdad opinan de Clynia</h1>
       <p class="hero__lead">
-        Clynia es una plataforma de salud online con médicos colegiados en España. Aquí reunimos las
-        reseñas y opiniones de quienes la han usado de verdad, pacientes y médicos, sin esconder lo que se puede
-        mejorar. Lo bueno, lo regular y alguna queja honesta. Esta es la foto real de la experiencia.
+        Clynia es una plataforma de salud online con médicos colegiados en España. En esta página
+        publicamos las reseñas y opiniones reales de quienes la usan, pacientes y médicos, recogidas
+        directamente desde su portal. Estamos empezando a reunirlas: aquí solo aparecerán valoraciones
+        verificadas, sin invenciones.
       </p>
-
-      <div class="trust">
-        <div class="trust__score">
-          <span class="trust__num">4,5</span>
-          <span class="stars stars--lg" style="--rating:4.5" role="img" aria-label="Valoración media: 4,5 de 5 estrellas"></span>
-          <span class="trust__meta">Media de <strong>20 reseñas</strong> de pacientes y médicos</span>
-        </div>
-
-        <ul class="trust__bars" aria-label="Distribución de las valoraciones">
-          <li><span class="bar__label">5★</span><span class="bar"><span class="bar__fill" style="width:75%"></span></span><span class="bar__count">15</span></li>
-          <li><span class="bar__label">4★</span><span class="bar"><span class="bar__fill" style="width:10%"></span></span><span class="bar__count">2</span></li>
-          <li><span class="bar__label">3★</span><span class="bar"><span class="bar__fill" style="width:5%"></span></span><span class="bar__count">1</span></li>
-          <li><span class="bar__label">2★</span><span class="bar"><span class="bar__fill" style="width:5%"></span></span><span class="bar__count">1</span></li>
-          <li><span class="bar__label">1★</span><span class="bar"><span class="bar__fill" style="width:5%"></span></span><span class="bar__count">1</span></li>
-        </ul>
-      </div>
     </section>
 
-    <!-- ===================== RESEÑAS ===================== -->
-    <h2 class="reviews__heading">Reseñas de pacientes y médicos</h2>
-
-    <!-- ===================== FILTRO ===================== -->
-    <nav class="filters" id="resenas" aria-label="Filtrar reseñas">
-      <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Todas</button>
-      <button class="chip" type="button" data-filter="5" aria-pressed="false">5 estrellas</button>
-      <button class="chip" type="button" data-filter="4" aria-pressed="false">4 estrellas</button>
-      <button class="chip" type="button" data-filter="critic" aria-pressed="false">Críticas</button>
-      <span class="filters__count" aria-live="polite">Mostrando 20 reseñas</span>
-    </nav>
-
-    <!-- ===================== MURO DE RESEÑAS (datos de EJEMPLO) ===================== -->
-    <section class="reviews" aria-label="Reseñas de Clynia">
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Por fin un proceso sin vergüenza</h3>
-        <p class="review__body">Llevaba años evitando ir al médico por el tema del peso. Rellené el cuestionario una noche que no dormía y al día siguiente ya tenía respuesta. Me trataron sin sermones y con paciencia. Es justo lo que necesitaba.</p>
-        <footer class="review__foot">
-          <span class="review__author">Marta G.</span>
-          <span class="review__role">Paciente · Pérdida de peso</span>
-          <time datetime="2026-05-12">mayo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Se trabaja con criterio clínico</h3>
-        <p class="review__body">Me uní hace unos meses y lo que más valoro es que no te presionan para aprobar casos. Si algo no encaja, se rechaza y punto. Da tranquilidad poner tu número de colegiado en algo serio.</p>
-        <footer class="review__foot">
-          <span class="review__author">Javier R.</span>
-          <span class="review__role">Médico colegiado</span>
-          <time datetime="2026-04-03">abril de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Me sentí escuchada</h3>
-        <p class="review__body">Tenía dudas sobre los sofocos y no sabía a quién preguntar sin esperar dos meses de lista. Aquí me contestó una médica de verdad, con su nombre y su colegiado. Tranquiliza mucho.</p>
-        <footer class="review__foot">
-          <span class="review__author">Lucía P.</span>
-          <span class="review__role">Paciente · Menopausia</span>
-          <time datetime="2026-05-02">mayo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-        </div>
-        <h3 class="review__title">Sencillo de principio a fin</h3>
-        <p class="review__body">Esperaba un lío de formularios y fue al revés. Todo claro, sin letra pequeña rara. El seguimiento por el portal está muy bien montado.</p>
-        <footer class="review__foot">
-          <span class="review__author">Andrés M.</span>
-          <span class="review__role">Paciente · Salud capilar</span>
-          <time datetime="2026-03-18">marzo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">El seguimiento marca la diferencia</h3>
-        <p class="review__body">No es soltarte el tratamiento y adiós. Cada par de semanas te preguntan cómo vas. Eso para mí es lo que lo hace distinto de otras webs que probé antes.</p>
-        <footer class="review__foot">
-          <span class="review__author">Carmen V.</span>
-          <span class="review__role">Paciente · Pérdida de peso</span>
-          <time datetime="2026-04-21">abril de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-        </div>
-        <h3 class="review__title">Discreto y rápido</h3>
-        <p class="review__body">Lo que buscaba era no tener que contarlo en la farmacia del barrio. Discreción total y en pocos días resuelto. Para esto la consulta online es un acierto.</p>
-        <footer class="review__foot">
-          <span class="review__author">Raúl T.</span>
-          <span class="review__role">Paciente · Salud sexual</span>
-          <time datetime="2026-05-09">mayo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Información honesta</h3>
-        <p class="review__body">Me gustó que no me prometieran milagros. Te explican qué se puede esperar y qué no, y eso da más confianza que cualquier promesa de las que ves por ahí.</p>
-        <footer class="review__foot">
-          <span class="review__author">Nuria S.</span>
-          <span class="review__role">Paciente · Longevidad</span>
-          <time datetime="2026-02-14">febrero de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Atención humana</h3>
-        <p class="review__body">Pensaba que iba a hablar con un robot y resulta que detrás había gente. Una persona me ajustó el plan cuando le dije que tenía molestias. Se agradece.</p>
-        <footer class="review__foot">
-          <span class="review__author">Pablo H.</span>
-          <span class="review__role">Paciente · Pérdida de peso</span>
-          <time datetime="2026-05-19">mayo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-        </div>
-        <h3 class="review__title">Me ahorró meses de espera</h3>
-        <p class="review__body">En la pública me daban cita para dentro de medio año. Aquí tuve una valoración seria en un par de días. Para mi caso ha valido cada euro.</p>
-        <footer class="review__foot">
-          <span class="review__author">Elena D.</span>
-          <span class="review__role">Paciente · Menopausia</span>
-          <time datetime="2026-03-07">marzo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Plataforma seria</h3>
-        <p class="review__body">Como médica agradezco que las historias lleguen ordenadas y completas. Se nota que está pensado por gente que entiende cómo es una consulta de verdad.</p>
-        <footer class="review__foot">
-          <span class="review__author">Sofía L.</span>
-          <span class="review__role">Médica colegiada</span>
-          <time datetime="2026-04-11">abril de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-        </div>
-        <h3 class="review__title">Sin salir de casa de verdad</h3>
-        <p class="review__body">Vivo en un pueblo y el especialista más cercano lo tengo a una hora en coche. Poder hacer esto desde el móvil me ha facilitado mucho la vida.</p>
-        <footer class="review__foot">
-          <span class="review__author">Iván C.</span>
-          <span class="review__role">Paciente · Salud capilar</span>
-          <time datetime="2026-01-23">enero de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Trato cercano</h3>
-        <p class="review__body">Lo que más me sorprendió fue el tono. Ni frío ni de venta agresiva. Te hablan como a una persona normal y eso, en temas de salud, importa.</p>
-        <footer class="review__foot">
-          <span class="review__author">Teresa B.</span>
-          <span class="review__role">Paciente · Pérdida de peso</span>
-          <time datetime="2026-04-28">abril de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-        </div>
-        <h3 class="review__title">Cumple lo que dice</h3>
-        <p class="review__body">Sin rodeos: pedí, me valoraron, me llegó. Justo lo que prometen en la web, ni más ni menos. Que algo funcione tal cual lo cuentan ya es raro.</p>
-        <footer class="review__foot">
-          <span class="review__author">Gonzalo F.</span>
-          <span class="review__role">Paciente · Salud sexual</span>
-          <time datetime="2026-05-15">mayo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Me lo recomendó una amiga</h3>
-        <p class="review__body">Vine por una amiga que estaba contenta y entiendo por qué. El portal es claro y en ningún momento te sientes un número más de una lista.</p>
-        <footer class="review__foot">
-          <span class="review__author">Patricia N.</span>
-          <span class="review__role">Paciente · Longevidad</span>
-          <time datetime="2026-03-30">marzo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="5">
-        <div class="review__head">
-          <span class="stars" style="--rating:5" role="img" aria-label="Valoración: 5 de 5"></span>
-        </div>
-        <h3 class="review__title">Por fin algo que sigo</h3>
-        <p class="review__body">He empezado mil cosas y las he dejado todas. Esto lo sigo porque me lo ponen fácil y porque me preguntan cómo voy. El recordatorio amable funciona conmigo.</p>
-        <footer class="review__foot">
-          <span class="review__author">Miguel Á.</span>
-          <span class="review__role">Paciente · Pérdida de peso</span>
-          <time datetime="2026-02-26">febrero de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="4">
-        <div class="review__head">
-          <span class="stars" style="--rating:4" role="img" aria-label="Valoración: 4 de 5"></span>
-          <span class="review__verified" title="Reseña verificada">Verificada</span>
-        </div>
-        <h3 class="review__title">Muy bien, con un pero</h3>
-        <p class="review__body">El servicio genial y la médica un encanto. Le quito una estrella porque el primer correo me fue a spam y pensé que no me habían contestado. Estaría bien que avisaran de eso al registrarte.</p>
-        <footer class="review__foot">
-          <span class="review__author">Sandra R.</span>
-          <span class="review__role">Paciente · Menopausia</span>
-          <time datetime="2026-04-08">abril de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="4">
-        <div class="review__head">
-          <span class="stars" style="--rating:4" role="img" aria-label="Valoración: 4 de 5"></span>
-        </div>
-        <h3 class="review__title">Buena experiencia</h3>
-        <p class="review__body">Todo correcto y serio. Me habría gustado un poco más de detalle en las explicaciones del plan, pero nada grave. Repetiré sin problema.</p>
-        <footer class="review__foot">
-          <span class="review__author">Héctor J.</span>
-          <span class="review__role">Paciente · Salud capilar</span>
-          <time datetime="2026-03-12">marzo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="3">
-        <div class="review__head">
-          <span class="stars" style="--rating:3" role="img" aria-label="Valoración: 3 de 5"></span>
-        </div>
-        <h3 class="review__title">Bien, pero echo de menos la voz</h3>
-        <p class="review__body">El servicio funciona y la gente es amable, pero todo fue por chat y yo soy más de hablar por teléfono. Es cosa mía, lo digo por si a alguien le pasa lo mismo antes de empezar.</p>
-        <footer class="review__foot">
-          <span class="review__author">Cristina M.</span>
-          <span class="review__role">Paciente · Pérdida de peso</span>
-          <time datetime="2026-05-05">mayo de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="2">
-        <div class="review__head">
-          <span class="stars" style="--rating:2" role="img" aria-label="Valoración: 2 de 5"></span>
-        </div>
-        <h3 class="review__title">Esperaba otra cosa</h3>
-        <p class="review__body">Pensé que el tratamiento entraba por mi seguro y resulta que es privado, lo pagas tú. El servicio en sí está bien, pero a mí no me cuadraba el gasto. Aviso para quien venga con la misma idea que tenía yo.</p>
-        <footer class="review__foot">
-          <span class="review__author">José Luis A.</span>
-          <span class="review__role">Paciente</span>
-          <time datetime="2026-04-17">abril de 2026</time>
-        </footer>
-      </article>
-
-      <article class="review" data-stars="1">
-        <div class="review__head">
-          <span class="stars" style="--rating:1" role="img" aria-label="Valoración: 1 de 5"></span>
-        </div>
-        <h3 class="review__title">El mensajero me la lió</h3>
-        <p class="review__body">Con Clynia ningún problema, la gente atenta. Pero la empresa de mensajería tardó cinco días y me dejó el paquete en una oficina lejísimos de casa. Por la entrega no repito de momento. Sé que no es culpa suya, pero es mi experiencia.</p>
-        <footer class="review__foot">
-          <span class="review__author">Fran D.</span>
-          <span class="review__role">Paciente · Pérdida de peso</span>
-          <time datetime="2026-05-21">mayo de 2026</time>
-        </footer>
-      </article>
-
+    <!-- ===================== ESTADO VACÍO ===================== -->
+    <section class="reviews-empty" id="resenas" aria-labelledby="empty-titulo">
+      <h2 id="empty-titulo">Todavía no hay reseñas publicadas</h2>
+      <p>
+        Estamos recogiendo las primeras valoraciones reales de pacientes y médicos desde el portal de
+        Clynia. En cuanto haya reseñas verificadas, aparecerán aquí con su puntuación, su fecha y el
+        perfil de quien las escribe.
+      </p>
+      <a class="btn btn--primary" href="https://clynia.es">Conocer Clynia</a>
     </section>
 
     <!-- ===================== TRANSPARENCIA ===================== -->
     <section class="info" aria-labelledby="como-titulo">
       <h2 id="como-titulo" class="info__title">Cómo recogemos las reseñas</h2>
       <p class="info__text">
-        Las opiniones de esta página vienen de personas que han usado Clynia de verdad. Tras una
+        Las opiniones que publicamos aquí vienen de personas que han usado Clynia de verdad. Tras una
         experiencia con la plataforma, paciente o médico recibe la opción de dejar su valoración desde
         su portal. No compramos reseñas, no las escribimos nosotros y no borramos las críticas cuando
         son justas. Si una reseña incumple las normas básicas de respeto o no corresponde a un uso real,
@@ -500,13 +174,13 @@
       <h2 id="faq-titulo" class="faq__title">Preguntas frecuentes</h2>
 
       <details class="faq__item">
-        <summary>¿Qué valoración media tiene Clynia?</summary>
-        <p>Clynia tiene una nota media de 4,5 sobre 5 según las opiniones recogidas. La mayoría son de 5 estrellas y destacan el seguimiento, el trato cercano y la rapidez de la valoración médica.</p>
+        <summary>¿Qué valoración tiene Clynia?</summary>
+        <p>Todavía no publicamos una valoración media porque estamos empezando a recoger reseñas verificadas. La media se calculará solo a partir de opiniones reales de pacientes y médicos, nunca con datos inventados.</p>
       </details>
 
       <details class="faq__item">
-        <summary>¿Son reales estas opiniones?</summary>
-        <p>Sí. Se recogen de personas que han usado Clynia, a través de su portal de paciente y de médico tras una experiencia real. No se publican opiniones inventadas ni compradas.</p>
+        <summary>¿Son reales las opiniones que se publican aquí?</summary>
+        <p>Sí. Solo publicamos reseñas de personas que han usado Clynia, recogidas a través de su portal de paciente y de médico tras una experiencia real. No publicamos opiniones inventadas ni compradas.</p>
       </details>
 
       <details class="faq__item">
