@@ -61,7 +61,8 @@
     .rev-stars{color:#f5a623;letter-spacing:3px;font-size:17px;line-height:1;display:inline-block;white-space:nowrap}
     .rev-stars--lg{font-size:23px;letter-spacing:5px}
     .reviews__title{font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;color:#16201c;margin:0 0 22px;line-height:1.3}
-    .rev-card{display:block;max-width:560px;margin:0 auto;background:#fff;border:1px solid #e3e9e4;border-radius:18px;padding:22px 24px;text-align:left;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(22,32,28,.04);transition:box-shadow .2s ease,border-color .2s ease}
+    .rev-list{display:flex;flex-direction:column;align-items:center;gap:16px}
+    .rev-card{display:block;width:100%;max-width:560px;margin:0 auto;background:#fff;border:1px solid #e3e9e4;border-radius:18px;padding:22px 24px;text-align:left;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(22,32,28,.04);transition:box-shadow .2s ease,border-color .2s ease}
     .rev-card:hover,.rev-card:focus-visible{box-shadow:0 8px 24px rgba(22,32,28,.10);border-color:#cdd8d0}
     .rev-card__top{display:flex;align-items:center;gap:12px;margin:0 0 6px}
     .rev-av{width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:#437066;color:#fff;font-family:'Raleway',sans-serif;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
@@ -93,17 +94,24 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "reviewCount": "1",
+      "reviewCount": "2",
       "bestRating": "5",
       "worstRating": "1"
     },
     "review": [
       {
         "@type": "Review",
+        "author": { "@type": "Person", "name": "Andrea Garcia M." },
+        "datePublished": "2026-07-29",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "reviewBody": "Llevo un mes de tratamiento y estoy encantada. Ya he perdido 4 kg. Tanto la respuesta como la cita con el médico fueron muy rápidas. ¡Ojalá hubiera empezado antes con Clynia!"
+      },
+      {
+        "@type": "Review",
         "author": { "@type": "Person", "name": "Sara Jaime A." },
         "datePublished": "2026-07-24",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "reviewBody": "Rellené el cuestionario un jueves por la noche, no tuve que hacer ninguna llamada y el médico revisó mi caso y me contestó por la web muy rápido. Ha sido súper cómodo y estoy muy contenta."
+        "reviewBody": "Rellene el cuestionario un jueves por la noche, no tuve que hacer ninguna llamada y el médico revisó mi caso y me contento por la web muy rápido. Ha sido súper cómodo y estoy muy contenta."
       }
     ]
   }
@@ -117,7 +125,7 @@
       {
         "@type": "Question",
         "name": "¿Qué valoración tiene Clynia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "En Google, la valoración de Clynia es de 5 sobre 5 con las primeras reseñas verificadas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales." }
+        "acceptedAnswer": { "@type": "Answer", "text": "En Google, la valoración de Clynia es de 5 sobre 5 con 2 reseñas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales." }
       },
       {
         "@type": "Question",
@@ -189,24 +197,42 @@
       <div class="gscore">
         <span class="gscore__num">5,0</span>
         <span class="rev-stars rev-stars--lg" aria-hidden="true">★★★★★</span>
-        <span class="gscore__meta">Valoración en Google · reseñas verificadas</span>
+        <span class="gscore__meta">Valoración en Google · 2 reseñas</span>
       </div>
 
       <h2 id="resenas-titulo" class="reviews__title">Lo que nos cuentan quienes ya la han usado</h2>
 
-      <a class="rev-card" href="https://maps.app.goo.gl/7jhamnNtikKLCREN8" target="_blank" rel="noopener nofollow" aria-label="Ver la reseña de Sara en Google (se abre en una pestaña nueva)">
-        <span class="rev-card__top">
-          <span class="rev-av" aria-hidden="true">S</span>
-          <span class="rev-who">
-            <span class="rev-name">Sara Jaime A.</span>
-            <span class="rev-sub">Paciente · reseña en Google</span>
+      <div class="rev-list">
+
+        <a class="rev-card" href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25KUGJWaHlkelpvYjNnNGIzTmlOWEZoUWxSb2IxRRAB!2m1!1s0x0:0xe4e75e5d681b93b7" target="_blank" rel="noopener nofollow" aria-label="Ver la reseña de Andrea en Google (se abre en una pestaña nueva)">
+          <span class="rev-card__top">
+            <span class="rev-av" aria-hidden="true">A</span>
+            <span class="rev-who">
+              <span class="rev-name">Andrea Garcia M.</span>
+              <span class="rev-sub">Paciente · reseña en Google</span>
+            </span>
+            <span class="rev-g" aria-hidden="true">G</span>
           </span>
-          <span class="rev-g" aria-hidden="true">G</span>
-        </span>
-        <span class="rev-stars" aria-label="5 de 5 estrellas">★★★★★</span>
-        <p class="rev-body">Rellené el cuestionario un jueves por la noche, no tuve que hacer ninguna llamada y el médico revisó mi caso y me contestó por la web muy rápido. Ha sido súper cómodo y estoy muy contenta.</p>
-        <span class="rev-more">Ver en Google &rarr;</span>
-      </a>
+          <span class="rev-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+          <p class="rev-body">Llevo un mes de tratamiento y estoy encantada. Ya he perdido 4 kg. Tanto la respuesta como la cita con el médico fueron muy rápidas. ¡Ojalá hubiera empezado antes con Clynia!</p>
+          <span class="rev-more">Ver en Google &rarr;</span>
+        </a>
+
+        <a class="rev-card" href="https://maps.app.goo.gl/7jhamnNtikKLCREN8" target="_blank" rel="noopener nofollow" aria-label="Ver la reseña de Sara en Google (se abre en una pestaña nueva)">
+          <span class="rev-card__top">
+            <span class="rev-av" aria-hidden="true">S</span>
+            <span class="rev-who">
+              <span class="rev-name">Sara Jaime A.</span>
+              <span class="rev-sub">Paciente · reseña en Google</span>
+            </span>
+            <span class="rev-g" aria-hidden="true">G</span>
+          </span>
+          <span class="rev-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+          <p class="rev-body">Rellene el cuestionario un jueves por la noche, no tuve que hacer ninguna llamada y el médico revisó mi caso y me contento por la web muy rápido. Ha sido súper cómodo y estoy muy contenta.</p>
+          <span class="rev-more">Ver en Google &rarr;</span>
+        </a>
+
+      </div>
 
       <p class="reviews__note">Cada reseña es real y verificable. Al pulsar te llevamos a Google, donde puedes leerla en su ficha original.</p>
     </section>
@@ -228,7 +254,7 @@
 
       <details class="faq__item">
         <summary>¿Qué valoración tiene Clynia?</summary>
-        <p>En Google, la valoración de Clynia es de 5 sobre 5 con las primeras reseñas verificadas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales.</p>
+        <p>En Google, la valoración de Clynia es de 5 sobre 5 con 2 reseñas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales.</p>
       </details>
 
       <details class="faq__item">
