@@ -59,7 +59,9 @@
     .gscore__num{font-family:'Lora',Georgia,serif;font-size:46px;font-weight:600;color:#16201c;line-height:1}
     .gscore__meta{font-size:13px;color:#6e7771}
     .rev-stars{color:#f5a623;letter-spacing:3px;font-size:17px;line-height:1;display:inline-block;white-space:nowrap}
-    .rev-stars--lg{font-size:23px;letter-spacing:5px}
+    .rev-stars--dim{color:#c9d2cb}
+    .gscore__stars{display:block;line-height:0}
+    .gscore__stars svg{display:block;width:140px;height:24px}
     .reviews__title{font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;color:#16201c;margin:0 0 22px;line-height:1.3}
     .rev-list{display:flex;flex-direction:column;align-items:center;gap:16px}
     .rev-card{display:block;width:100%;max-width:560px;margin:0 auto;background:#fff;border:1px solid #e3e9e4;border-radius:18px;padding:22px 24px;text-align:left;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(22,32,28,.04);transition:box-shadow .2s ease,border-color .2s ease}
@@ -121,6 +123,13 @@
         "datePublished": "2026-07-24",
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
         "reviewBody": "Rellene el cuestionario un jueves por la noche, no tuve que hacer ninguna llamada y el médico revisó mi caso y me contento por la web muy rápido. Ha sido súper cómodo y estoy muy contenta."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Noelia De P." },
+        "datePublished": "2026-08-16",
+        "reviewRating": { "@type": "Rating", "ratingValue": "3", "bestRating": "5", "worstRating": "1" },
+        "reviewBody": "Fácil de empezar y fácil resolver dudas con mi médico,muy rápido también, lo único malo es que es caro el tratamiento."
       }
     ]
   }
@@ -134,7 +143,7 @@
       {
         "@type": "Question",
         "name": "¿Qué valoración tiene Clynia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "En Google, la valoración de Clynia es de 5 sobre 5 con 3 reseñas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales." }
+        "acceptedAnswer": { "@type": "Answer", "text": "En Google, la valoración de Clynia es de 4,5 sobre 5 con 4 reseñas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales." }
       },
       {
         "@type": "Question",
@@ -205,7 +214,22 @@
 
       <div class="gscore">
         <span class="gscore__num">4,5</span>
-        <span class="rev-stars rev-stars--lg" aria-hidden="true">★★★★☆</span>
+        <span class="gscore__stars" role="img" aria-label="4,5 de 5 estrellas">
+          <svg viewBox="0 0 140 24" width="140" height="24" focusable="false" aria-hidden="true">
+            <defs>
+              <path id="gs-star" d="M12 1.7l3.24 6.57 7.25 1.05-5.25 5.11 1.24 7.22L12 18.24l-6.48 3.41 1.24-7.22-5.25-5.11 7.25-1.05L12 1.7z"/>
+              <linearGradient id="gs-half" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="50%" stop-color="#f5a623"/>
+                <stop offset="50%" stop-color="#e3e9e4"/>
+              </linearGradient>
+            </defs>
+            <use href="#gs-star" x="0" fill="#f5a623"/>
+            <use href="#gs-star" x="29" fill="#f5a623"/>
+            <use href="#gs-star" x="58" fill="#f5a623"/>
+            <use href="#gs-star" x="87" fill="#f5a623"/>
+            <use href="#gs-star" x="116" fill="url(#gs-half)"/>
+          </svg>
+        </span>
         <span class="gscore__meta">Valoración en Google · 4 reseñas</span>
       </div>
 
@@ -222,7 +246,7 @@
             </span>
             <span class="rev-g" aria-hidden="true">G</span>
           </span>
-          <span class="rev-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+          <span class="rev-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
           <p class="rev-body">Maravillosa atención en Clynia. El endocrinólogo está muy actualizado, conoce los últimos avances y artículos científicos. La atención es rápida y atenta y el seguimiento es excelente: responden rápido a todas las preguntas y están pendientes de cualquier síntoma o duda. Totalmente recomendado!</p>
           <span class="rev-more">Ver en Google &rarr;</span>
         </a>
@@ -236,7 +260,7 @@
             </span>
             <span class="rev-g" aria-hidden="true">G</span>
           </span>
-          <span class="rev-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+          <span class="rev-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
           <p class="rev-body">Llevo un mes de tratamiento y estoy encantada. <span class="rev-redact">frase oculta por Clynia</span> Tanto la respuesta como la cita con el médico fueron muy rápidas. ¡Ojalá hubiera empezado antes con Clynia!</p>
           <p class="rev-note">Aquí Andrea contaba el resultado que había tenido. La frase la hemos ocultado nosotros, no ella: no publicamos resultados de tratamientos. No la hemos borrado, la reseña sigue entera en Google.</p>
           <span class="rev-more">Ver en Google &rarr;</span>
@@ -251,8 +275,22 @@
             </span>
             <span class="rev-g" aria-hidden="true">G</span>
           </span>
-          <span class="rev-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+          <span class="rev-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
           <p class="rev-body">Rellene el cuestionario un jueves por la noche, no tuve que hacer ninguna llamada y el médico revisó mi caso y me contento por la web muy rápido. Ha sido súper cómodo y estoy muy contenta.</p>
+          <span class="rev-more">Ver en Google &rarr;</span>
+        </a>
+
+        <a class="rev-card" href="https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT210VFkycHBSbTVUWkdKdlFscEJXSEJYVVU5Sk1sRRAB!2m1!1s0x0:0xe4e75e5d681b93b7" target="_blank" rel="noopener nofollow" aria-label="Ver la reseña de Noelia en Google (se abre en una pestaña nueva)">
+          <span class="rev-card__top">
+            <span class="rev-av" aria-hidden="true">N</span>
+            <span class="rev-who">
+              <span class="rev-name">Noelia De P.</span>
+              <span class="rev-sub">Paciente · reseña en Google</span>
+            </span>
+            <span class="rev-g" aria-hidden="true">G</span>
+          </span>
+          <span class="rev-stars" role="img" aria-label="3 de 5 estrellas">★★★<span class="rev-stars--dim">★★</span></span>
+          <p class="rev-body">Fácil de empezar y fácil resolver dudas con mi médico,muy rápido también, lo único malo es que es caro el tratamiento.</p>
           <span class="rev-more">Ver en Google &rarr;</span>
         </a>
 
@@ -278,7 +316,7 @@
 
       <details class="faq__item">
         <summary>¿Qué valoración tiene Clynia?</summary>
-        <p>En Google, la valoración de Clynia es de 5 sobre 5 con 3 reseñas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales.</p>
+        <p>En Google, la valoración de Clynia es de 4,5 sobre 5 con 4 reseñas de pacientes que ya han usado la plataforma. La media se irá actualizando a medida que se reúnan más opiniones, siempre con datos reales.</p>
       </details>
 
       <details class="faq__item">
